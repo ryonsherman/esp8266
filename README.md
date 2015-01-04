@@ -33,6 +33,6 @@ chmod +x esptool.py
 ## Examples
 #### Web Server
 ```
-./esp8266.py --restart exec esp8266_webserver.lua
-./esp8266.py upload esp8266_webserver.html index.html
+./esp8266.py --restart exec examples/webserver/init.lua
+./esp8266.py upload examples/webserver/index.html
 ```
