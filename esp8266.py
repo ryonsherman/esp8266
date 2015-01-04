@@ -1,5 +1,6 @@
 #!/usr/bin/env python2
 
+import os
 import time
 import serial
 
@@ -77,7 +78,7 @@ if args.restart:
 if args.action == 'delete':
     write("file.remove('%s')" % args.target)
 elif args.action == 'upload':
-    dst = args.destination or args.source
+    dst = args.destination or os.path.basename(args.source)
     write_file(args.source, dst)
     if args.verbose: print read()
     else: read()
