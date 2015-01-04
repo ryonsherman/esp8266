@@ -1,0 +1,3 @@
+[submodule "lualint"]
+	path = lualint
+	url = https://github.com/philips/lualint
