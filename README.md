@@ -14,7 +14,13 @@ Exploration of the [Espruino ESP8266](http://www.espruino.com/ESP8266) SoC
 * `UTXD` to `RXD` on UART device
 * `URXD` to `TXD` on UART device
 
+#### Serial
+
+[AT Commands](http://www.electrodragon.com/w/Wi07c#AT_Commands)
+
 ## NodeMcu
+[NodeMcu](http://nodemcu.com/index_en.html) is an [open-source](https://github.com/nodemcu/nodemcu-firmware) firmware that provides a [Lua](http://www.lua.org) interface to the ESP8266.
+#### Flashing
 Ensure `GPIO0` is `LOW` and `CH_PD` is `HIGH` for flashing. Remove `GPIO0` and RESET for normal operation.
 ```
 wget https://raw.githubusercontent.com/themadinventor/esptool/master/esptool.py
