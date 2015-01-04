@@ -3,7 +3,9 @@ ESP8266
 
 Expiriments with the [Espruino ESP8266](http://www.espruino.com/ESP8266) SoC
 
-![ESP8266 Pinout](http://www.espruino.com/refimages/ESP8266_pinout.pgn)
+**Pinout**
+
+![ESP8266 Pinout](http://www.espruino.com/refimages/ESP8266_pinout.png)
 
 **Webserver Example**
 ```
