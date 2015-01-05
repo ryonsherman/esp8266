@@ -31,6 +31,34 @@ chmod +x esptool.py
 ```
 
 ## Examples
+`esp8266.py` is a script to aid in the upload and execution of lua scripts.
+
+```
+usage: esp8266.py [-h] [--verbose] [-d DEVICE] [-b BAUDRATE] [-t TIMEOUT]
+                  [--restart]
+                  {exec,upload,delete} ...
+
+positional arguments:
+  {exec,upload,delete}  action to perform
+    exec                upload and execute file
+    upload              upload file to destination
+    delete              delete file from device
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --verbose             use verbose output
+
+serial:
+  -d DEVICE, --device DEVICE
+                        device path (default /dev/ttyUSB0)
+  -b BAUDRATE, --baud BAUDRATE
+                        device baud rate (default: 9600)
+  -t TIMEOUT, --timeout TIMEOUT
+                        read timeout value (default: 0.1)
+
+device:
+  --restart, --reset    restart device before taking action
+```
 #### Web Server
 ```
 ./esp8266.py --restart exec examples/webserver/init.lua
