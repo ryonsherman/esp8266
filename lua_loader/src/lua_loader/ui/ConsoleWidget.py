@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'src/lua_loader/ui/ConsoleWidget.ui'
 #
-# Created: Thu Feb 19 20:13:54 2015
+# Created: Thu Feb 19 22:18:10 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!

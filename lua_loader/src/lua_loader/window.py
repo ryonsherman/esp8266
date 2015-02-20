@@ -9,10 +9,10 @@ import time
 
 from PyQt4 import QtGui
 
-from lua_loader.widget import LogWidget
-from lua_loader.widget import FileWidget
-from lua_loader.widget import ConsoleWidget
-from lua_loader.widget import FileTreeWidget
+from lua_loader.widget.Log import LogWidget
+from lua_loader.widget.File import FileWidget
+from lua_loader.widget.Console import ConsoleWidget
+from lua_loader.widget.FileTree import FileTreeWidget
 
 from lua_loader.ui.MainWindow import Ui_MainWindow
 
@@ -29,6 +29,9 @@ class MainWindow(QtGui.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+        # set app version in window title
+        self.setWindowTitle(self.windowTitle() + ' ' + app.version)
+
         # initialize file tree widget
         self.ui.file_tree = FileTreeWidget(self)
         # initialize console tab widget
@@ -39,27 +42,18 @@ class MainWindow(QtGui.QMainWindow):
         # connect Menu -> View Actions to toggle action view
         self.ui.menu_view_actions.triggered.connect(self.ui.console_tab.toggleActionView)
         # connect Menu -> View Files to toggle file view
-        self.ui.menu_view_files.triggered.connect(self.ui.file_tree.toggleView)
+        self.ui.menu_view_files.triggered.connect(self.ui.file_tree.toggle)
         # connect Menu -> View Log to toggle log tab
         self.ui.menu_view_log.triggered.connect(self.ui.log_tab.show)
 
         # connect to app connected signal
-        self.app.signals.connected.connect(self.onConnect)
+        self.app.serial.signals.connected.connect(self.onConnect)
 
-        # hide log tab by default
-        self.ui.log_tab.hide()
-        # hide file tree view by default
-        self.ui.file_tree.hide()
-        # create new file tab by default
-        self.ui.file_tree.createFile()
+        # show new file tab by default
+        self.createFile()
 
-    def onConnect(self, connected):
-        # toggle Menu -> View Files option
-        self.ui.menu_view_files.setEnabled(connected)
-        # write connection message to console
-        self.ui.console_tab.writeToConsole("%s at %s" %
-            ('Connected' if connected else 'Disconnected', time.ctime()) +
-            ('\n>' if connected else ''))
+    def createFile(self):
+        self.ui.tab_view.addTab(FileWidget(self.ui.tab_view), 'New File')
 
     def closeEvent(self, event):
         # iterate tabs in tab view
@@ -81,3 +75,11 @@ class MainWindow(QtGui.QMainWindow):
             else: return event.ignore()
         # accept window close event by default
         event.accept()
+
+    def onConnect(self, connected):
+        # toggle Menu -> View Files option
+        self.ui.menu_view_files.setEnabled(connected)
+        # write connection message to console
+        self.ui.console_tab.output("%s at %s" %
+            ('Connected' if connected else 'Disconnected', time.ctime()) +
+            ('\n>' if connected else ''))

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'src/lua_loader/ui/ConsoleWirelessActionsWidget.ui'
+# Form implementation generated from reading ui file 'src/lua_loader/ui/ConsoleWifiActionsWidget.ui'
 #
-# Created: Thu Feb 19 20:13:54 2015
+# Created: Thu Feb 19 22:18:10 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -23,13 +23,13 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_ConsoleWirelessActionsWidget(object):
-    def setupUi(self, ConsoleWirelessActionsWidget):
-        ConsoleWirelessActionsWidget.setObjectName(_fromUtf8("ConsoleWirelessActionsWidget"))
-        ConsoleWirelessActionsWidget.resize(368, 147)
-        self.gridLayout_2 = QtGui.QGridLayout(ConsoleWirelessActionsWidget)
+class Ui_ConsoleWifiActionsWidget(object):
+    def setupUi(self, ConsoleWifiActionsWidget):
+        ConsoleWifiActionsWidget.setObjectName(_fromUtf8("ConsoleWifiActionsWidget"))
+        ConsoleWifiActionsWidget.resize(368, 147)
+        self.gridLayout_2 = QtGui.QGridLayout(ConsoleWifiActionsWidget)
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
-        self.wireless_view = QtGui.QGroupBox(ConsoleWirelessActionsWidget)
+        self.wireless_view = QtGui.QGroupBox(ConsoleWifiActionsWidget)
         self.wireless_view.setEnabled(True)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -69,20 +69,20 @@ class Ui_ConsoleWirelessActionsWidget(object):
         self.gridLayout.addWidget(self.button_set_ap, 0, 2, 1, 1)
         self.gridLayout_2.addWidget(self.wireless_view, 0, 0, 1, 1)
 
-        self.retranslateUi(ConsoleWirelessActionsWidget)
-        QtCore.QMetaObject.connectSlotsByName(ConsoleWirelessActionsWidget)
+        self.retranslateUi(ConsoleWifiActionsWidget)
+        QtCore.QMetaObject.connectSlotsByName(ConsoleWifiActionsWidget)
 
-    def retranslateUi(self, ConsoleWirelessActionsWidget):
-        ConsoleWirelessActionsWidget.setWindowTitle(_translate("ConsoleWirelessActionsWidget", "Form", None))
-        self.wireless_view.setTitle(_translate("ConsoleWirelessActionsWidget", "Wireless", None))
-        self.essid_input.setPlaceholderText(_translate("ConsoleWirelessActionsWidget", "ESSID", None))
-        self.button_get_ip.setText(_translate("ConsoleWirelessActionsWidget", "Get IP", None))
-        self.button_survey.setText(_translate("ConsoleWirelessActionsWidget", "Survey", None))
-        self.mode_select.setItemText(0, _translate("ConsoleWirelessActionsWidget", "Mode", None))
-        self.mode_select.setItemText(1, _translate("ConsoleWirelessActionsWidget", "STATION", None))
-        self.mode_select.setItemText(2, _translate("ConsoleWirelessActionsWidget", "SOFTAP", None))
-        self.mode_select.setItemText(3, _translate("ConsoleWirelessActionsWidget", "STATIONAP", None))
-        self.button_connect.setText(_translate("ConsoleWirelessActionsWidget", "Connect", None))
-        self.password_entry.setPlaceholderText(_translate("ConsoleWirelessActionsWidget", "Password", None))
-        self.button_set_ap.setText(_translate("ConsoleWirelessActionsWidget", "Set AP", None))
+    def retranslateUi(self, ConsoleWifiActionsWidget):
+        ConsoleWifiActionsWidget.setWindowTitle(_translate("ConsoleWifiActionsWidget", "Form", None))
+        self.wireless_view.setTitle(_translate("ConsoleWifiActionsWidget", "Wireless", None))
+        self.essid_input.setPlaceholderText(_translate("ConsoleWifiActionsWidget", "ESSID", None))
+        self.button_get_ip.setText(_translate("ConsoleWifiActionsWidget", "Get IP", None))
+        self.button_survey.setText(_translate("ConsoleWifiActionsWidget", "Survey", None))
+        self.mode_select.setItemText(0, _translate("ConsoleWifiActionsWidget", "Mode", None))
+        self.mode_select.setItemText(1, _translate("ConsoleWifiActionsWidget", "STATION", None))
+        self.mode_select.setItemText(2, _translate("ConsoleWifiActionsWidget", "SOFTAP", None))
+        self.mode_select.setItemText(3, _translate("ConsoleWifiActionsWidget", "STATIONAP", None))
+        self.button_connect.setText(_translate("ConsoleWifiActionsWidget", "Connect", None))
+        self.password_entry.setPlaceholderText(_translate("ConsoleWifiActionsWidget", "Password", None))
+        self.button_set_ap.setText(_translate("ConsoleWifiActionsWidget", "Set AP", None))
 
