@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConsoleWifiWidget</class>
+ <widget class="QWidget" name="ConsoleWifiWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>184</width>
+    <height>258</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="wifi_buttons">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Wireless</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="0" colspan="5">
+       <widget class="QLineEdit" name="essid_input">
+        <property name="placeholderText">
+         <string>ESSID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="5">
+       <widget class="QLineEdit" name="password_input">
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QToolButton" name="button_console_bg">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>Info</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QPushButton" name="button_survey">
+        <property name="text">
+         <string>Survey</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QPushButton" name="button_set_ap">
+        <property name="text">
+         <string>Set AP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="4">
+       <widget class="QComboBox" name="mode_select">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>STATION</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SOFTAP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>STATIONAP</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="2" colspan="3">
+       <widget class="QPushButton" name="button_connect">
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2" colspan="3">
+       <widget class="QPushButton" name="button_get_ip">
+        <property name="text">
+         <string>Get IP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="5">
+       <widget class="QWidget" name="ap_input" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLineEdit" name="ap_essid_input">
+           <property name="placeholderText">
+            <string>AP ESSID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ap_password_input">
+           <property name="echoMode">
+            <enum>QLineEdit::Normal</enum>
+           </property>
+           <property name="placeholderText">
+            <string>AP Password</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>mode_select</tabstop>
+  <tabstop>essid_input</tabstop>
+  <tabstop>password_input</tabstop>
+  <tabstop>ap_essid_input</tabstop>
+  <tabstop>ap_password_input</tabstop>
+  <tabstop>button_set_ap</tabstop>
+  <tabstop>button_connect</tabstop>
+  <tabstop>button_survey</tabstop>
+  <tabstop>button_get_ip</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
